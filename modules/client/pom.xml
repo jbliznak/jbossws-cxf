@@ -165,12 +165,6 @@
     <dependency>
       <groupId>org.apache.santuario</groupId>
       <artifactId>xmlsec</artifactId>
-      <exclusions>
-        <exclusion>
-          <groupId>org.codehaus.woodstox</groupId>
-          <artifactId>woodstox-core-asl</artifactId>
-        </exclusion>
-      </exclusions>
     </dependency>
     <dependency>
       <groupId>com.fasterxml.woodstox</groupId>
@@ -308,6 +302,7 @@
                         <exclude>org.apache.cxf:cxf-rt-javascript</exclude>
                         <exclude>org.apache.geronimo.specs</exclude>
                         <exclude>org.codehaus.jra:jra</exclude>
+                        <exclude>org.codehaus.woodstox:woodstox-core-asl</exclude> <!-- We use newer com.fasterxml.woodstox:woodstox-core -->
                         <exclude>org.ow2.asm:asm</exclude> <!-- We have older (3.3.1) version on container -->
                         <exclude>org.slf4j:slf4j-jdk14</exclude>
                         <exclude>org.springframework:*</exclude>
