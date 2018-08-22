@@ -19,8 +19,12 @@ java -version
 SERVER_VERSION=$1
 SECURITY_MGR=$2
 USE_WFLY_MASTER=$3
-
+USE_ELYTRON_PROFILE=$4
 D_SERVER_HOME=""
+
+if [[ $USE_ELYTRON_PROFILE = "true" ]]; then
+  ELYTRON_PROFILE=,elytron
+fi
 
 if [[ $USE_WFLY_MASTER = "true" ]]; then
 
@@ -41,4 +45,4 @@ if [[ $USE_WFLY_MASTER = "true" ]]; then
   cd $MYPWD
 fi
 
-mvn -s .travis-settings.xml -B -fae -DSECMGR=${SECURITY_MGR} -P${SERVER_VERSION} ${D_SERVER_HOME} integration-test
+mvn -s .travis-settings.xml -B -fae -DSECMGR=${SECURITY_MGR} -P${SERVER_VERSION}${ELYTRON_PROFILE} ${D_SERVER_HOME} integration-test
