@@ -1,0 +1,7 @@
+org.jboss.ws.cxf:jbossws-cxf-deps-test:jar:1.0.0.Final
+\- org.jboss.ws.cxf:jbossws-cxf-test-utils:jar:5.2.5-SNAPSHOT:compile
+   \- commons-validator:commons-validator:jar:1.6:compile
+      +- commons-beanutils:commons-beanutils:jar:1.9.2:compile
+      +- commons-digester:commons-digester:jar:1.8.1:compile
+      +- commons-logging:commons-logging:jar:1.2:compile
+      \- commons-collections:commons-collections:jar:3.2.2:compile

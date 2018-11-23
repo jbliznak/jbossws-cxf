@@ -1,0 +1,271 @@
+org.jboss.ws.cxf:jbossws-cxf-performance-tests:jar:5.2.5-SNAPSHOT
++- org.jboss.ws.cxf:jbossws-cxf-factories:jar:5.2.5-SNAPSHOT:compile
++- org.jboss.ws.cxf:jbossws-cxf-test-utils:jar:5.2.5-SNAPSHOT:compile
+|  \- commons-validator:commons-validator:jar:1.6:compile
+|     +- commons-beanutils:commons-beanutils:jar:1.9.3:compile
+|     \- commons-digester:commons-digester:jar:1.8.1:compile
++- org.jboss.ws.cxf:jbossws-cxf-server:jar:5.2.5-SNAPSHOT:compile
+|  +- org.jboss.spec.javax.servlet:jboss-servlet-api_3.1_spec:jar:1.0.2.Final:compile
+|  +- org.jboss.ws:jbossws-spi:jar:3.2.3.Final:compile
+|  +- org.apache.cxf:cxf-rt-features-logging:jar:3.2.6:compile
+|  |  \- org.apache.cxf:cxf-core:jar:3.2.6:compile
+|  |     \- org.apache.ws.xmlschema:xmlschema-core:jar:2.2.3:compile
+|  +- org.apache.cxf:cxf-rt-bindings-soap:jar:3.2.6:compile
+|  |  \- org.apache.cxf:cxf-rt-databinding-jaxb:jar:3.2.6:compile
+|  +- org.apache.cxf:cxf-rt-bindings-coloc:jar:3.2.6:compile
+|  +- org.apache.cxf:cxf-rt-frontend-jaxws:jar:3.2.6:compile
+|  |  +- xml-resolver:xml-resolver:jar:1.2:compile
+|  |  +- org.apache.cxf:cxf-rt-bindings-xml:jar:3.2.6:compile
+|  |  +- org.apache.cxf:cxf-rt-frontend-simple:jar:3.2.6:compile
+|  |  \- org.apache.cxf:cxf-rt-ws-addr:jar:3.2.6:compile
+|  +- org.apache.cxf:cxf-rt-features-clustering:jar:3.2.6:compile
+|  +- org.apache.cxf:cxf-rt-management:jar:3.2.6:compile
+|  +- org.apache.cxf:cxf-rt-transports-http:jar:3.2.6:compile
+|  +- org.apache.cxf:cxf-rt-transports-jms:jar:3.2.6:compile
+|  +- org.apache.cxf:cxf-rt-transports-local:jar:3.2.6:compile
+|  +- org.apache.cxf:cxf-rt-ws-mex:jar:3.2.6:compile
+|  +- org.apache.cxf:cxf-rt-ws-rm:jar:3.2.6:compile
+|  +- org.apache.cxf:cxf-rt-ws-policy:jar:3.2.6:compile
+|  |  +- wsdl4j:wsdl4j:jar:1.6.3:compile
+|  |  \- org.apache.neethi:neethi:jar:3.1.1:compile
+|  +- org.apache.cxf:cxf-rt-ws-security:jar:3.2.6:compile
+|  |  +- org.apache.cxf:cxf-rt-security-saml:jar:3.2.6:compile
+|  |  |  \- org.apache.cxf:cxf-rt-security:jar:3.2.6:compile
+|  |  +- net.sf.ehcache:ehcache:jar:2.10.5:compile
+|  |  +- org.apache.wss4j:wss4j-ws-security-dom:jar:2.2.2:compile
+|  |  |  \- org.apache.wss4j:wss4j-ws-security-common:jar:2.2.2:compile
+|  |  |     +- org.opensaml:opensaml-saml-impl:jar:3.3.0:compile
+|  |  |     |  +- org.opensaml:opensaml-profile-api:jar:3.3.0:compile
+|  |  |     |  |  \- org.opensaml:opensaml-core:jar:3.3.0:compile
+|  |  |     |  |     \- io.dropwizard.metrics:metrics-core:jar:3.1.2:compile
+|  |  |     |  +- org.opensaml:opensaml-saml-api:jar:3.3.0:compile
+|  |  |     |  |  +- org.opensaml:opensaml-xmlsec-api:jar:3.3.0:compile
+|  |  |     |  |  \- org.opensaml:opensaml-soap-api:jar:3.3.0:compile
+|  |  |     |  +- org.opensaml:opensaml-security-impl:jar:3.3.0:compile
+|  |  |     |  |  \- org.opensaml:opensaml-security-api:jar:3.3.0:compile
+|  |  |     |  |     \- org.cryptacular:cryptacular:jar:1.1.1:compile
+|  |  |     |  +- org.opensaml:opensaml-xmlsec-impl:jar:3.3.0:compile
+|  |  |     |  \- net.shibboleth.utilities:java-support:jar:7.3.0:compile
+|  |  |     |     +- com.google.guava:guava:jar:19.0:compile
+|  |  |     |     \- joda-time:joda-time:jar:2.9:compile
+|  |  |     +- org.opensaml:opensaml-xacml-impl:jar:3.3.0:compile
+|  |  |     |  \- org.opensaml:opensaml-xacml-api:jar:3.3.0:compile
+|  |  |     +- org.opensaml:opensaml-xacml-saml-impl:jar:3.3.0:compile
+|  |  |     |  \- org.opensaml:opensaml-xacml-saml-api:jar:3.3.0:compile
+|  |  |     +- org.jasypt:jasypt:jar:1.9.2:compile
+|  |  |     \- org.apache.geronimo.javamail:geronimo-javamail_1.4_mail:jar:1.8.4:compile
+|  |  +- org.apache.wss4j:wss4j-policy:jar:2.2.2:compile
+|  |  +- org.apache.wss4j:wss4j-ws-security-stax:jar:2.2.2:compile
+|  |  |  \- org.apache.wss4j:wss4j-bindings:jar:2.2.2:compile
+|  |  \- org.apache.wss4j:wss4j-ws-security-policy-stax:jar:2.2.2:compile
+|  +- org.apache.cxf:cxf-tools-java2ws:jar:3.2.6:compile
+|  |  +- org.apache.cxf:cxf-tools-common:jar:3.2.6:compile
+|  |  \- org.apache.cxf:cxf-rt-databinding-aegis:jar:3.2.6:compile
+|  +- org.apache.cxf:cxf-tools-wsdlto-core:jar:3.2.6:compile
+|  |  \- org.apache.cxf:cxf-tools-validator:jar:3.2.6:compile
+|  +- org.apache.cxf:cxf-tools-wsdlto-databinding-jaxb:jar:3.2.6:compile
+|  +- org.apache.cxf:cxf-tools-wsdlto-frontend-jaxws:jar:3.2.6:compile
+|  |  \- org.apache.commons:commons-text:jar:1.2:compile
+|  +- org.apache.cxf.services.sts:cxf-services-sts-core:jar:3.2.6:compile
+|  +- org.apache.cxf.services.ws-discovery:cxf-services-ws-discovery-api:jar:3.2.6:compile
+|  +- org.apache.cxf.xjcplugins:cxf-xjc-boolean:jar:3.2.2:compile
+|  +- org.apache.cxf.xjcplugins:cxf-xjc-bug986:jar:3.2.2:compile
+|  +- org.apache.cxf.xjcplugins:cxf-xjc-dv:jar:3.2.2:compile
+|  +- org.apache.cxf.xjcplugins:cxf-xjc-ts:jar:3.2.2:compile
+|  +- org.apache.cxf.xjc-utils:cxf-xjc-runtime:jar:3.2.2:compile
+|  +- org.apache.velocity:velocity-engine-core:jar:2.0:compile
+|  +- commons-collections:commons-collections:jar:3.2.2:compile
+|  +- org.apache.commons:commons-lang3:jar:3.8.1:compile
+|  +- javax.xml.stream:stax-api:jar:1.0-2:compile
+|  +- org.apache.santuario:xmlsec:jar:2.1.2:compile
+|  +- com.fasterxml.woodstox:woodstox-core:jar:5.1.0:compile
+|  |  \- org.codehaus.woodstox:stax2-api:jar:4.1:compile
+|  +- org.ow2.asm:asm:jar:6.2.1:compile
+|  +- org.glassfish.jaxb:jaxb-runtime:jar:2.3.1:compile
+|  |  +- org.glassfish.jaxb:txw2:jar:2.3.1:compile
+|  |  +- com.sun.istack:istack-commons-runtime:jar:3.0.7:compile
+|  |  +- org.jvnet.staxex:stax-ex:jar:1.8:compile
+|  |  \- javax.activation:javax.activation-api:jar:1.2.0:compile
+|  +- org.glassfish.jaxb:jaxb-xjc:jar:2.3.1:compile
+|  |  +- org.glassfish.jaxb:xsom:jar:2.3.1:compile
+|  |  +- com.sun.xml.dtd-parser:dtd-parser:jar:1.4:compile
+|  |  +- com.sun.istack:istack-commons-tools:jar:3.0.7:compile
+|  |  |  \- org.apache.ant:ant:jar:1.10.2:compile
+|  |  |     \- org.apache.ant:ant-launcher:jar:1.10.2:compile
+|  |  \- com.sun.xml.bind.external:relaxng-datatype:jar:2.3.1:compile
+|  +- org.glassfish.jaxb:codemodel:jar:2.3.1:compile
+|  +- com.sun.xml.bind.external:rngom:jar:2.3.1:compile
+|  +- org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.3_spec:jar:1.0.1.Final:compile
+|  +- org.jboss.spec.javax.xml.soap:jboss-saaj-api_1.3_spec:jar:1.0.6.Final:compile
+|  +- org.jboss.spec.javax.jms:jboss-jms-api_2.0_spec:jar:1.0.2.Final:compile
+|  +- org.jboss.spec.javax.security.jacc:jboss-jacc-api_1.5_spec:jar:1.0.2.Final:compile
+|  \- org.jboss.logging:jboss-logging:jar:3.3.2.Final:compile
++- org.picketlink:picketlink-common:jar:2.5.5.SP12:test
++- org.picketlink:picketlink-federation:jar:2.5.5.SP12:test
+|  +- org.picketlink:picketlink-config:jar:2.5.5.SP12:test
+|  |  \- org.picketlink:picketlink-idm-impl:jar:2.5.5.SP12:test
+|  |     \- org.picketlink:picketlink-idm-api:jar:2.5.5.SP12:test
+|  +- org.jboss.security:jbossxacml:jar:2.0.8.Final:test
+|  \- org.picketbox:picketbox:jar:5.0.3.Final:provided
++- org.apache.derby:derby:jar:10.14.2.0:test
++- junit:junit:jar:4.12:provided
+|  \- org.hamcrest:hamcrest-core:jar:1.3:provided
++- org.apache.jmeter:ApacheJMeter_java:jar:2.13:provided
+|  +- org.apache.jmeter:jorphan:jar:2.13:provided
+|  +- org.apache.jmeter:ApacheJMeter_core:jar:2.13:provided
+|  +- org.apache.jmeter:ApacheJMeter_components:jar:2.13:provided
+|  +- bsf:bsf:jar:2.4.0:provided
+|  +- avalon-framework:avalon-framework:jar:4.1.4:provided
+|  +- org.beanshell:bsh:jar:2.0b5:provided
+|  +- org.bouncycastle:bcmail-jdk15on:jar:1.49:provided
+|  +- org.bouncycastle:bcpkix-jdk15on:jar:1.49:provided
+|  +- commons-codec:commons-codec:jar:1.10:compile
+|  +- commons-httpclient:commons-httpclient:jar:3.1:provided
+|  +- commons-io:commons-io:jar:2.4:provided
+|  +- commons-jexl:commons-jexl:jar:1.1:provided
+|  +- org.apache.commons:commons-jexl:jar:2.1.1:provided
+|  +- commons-net:commons-net:jar:3.3:provided
+|  +- dnsjava:dnsjava:jar:2.1.7:provided
+|  +- excalibur-datasource:excalibur-datasource:jar:2.1:provided
+|  |  +- hsqldb:hsqldb:jar:1.8.0.1:provided
+|  |  +- avalon-framework:avalon-framework-api:jar:4.3:provided
+|  |  +- avalon-framework:avalon-framework-impl:jar:4.3:provided
+|  |  |  +- xml-apis:xmlParserAPIs:jar:2.0.2:provided
+|  |  |  \- jmock:jmock:jar:1.0.1:provided
+|  |  +- avalon-logkit:avalon-logkit:jar:2.1:provided
+|  |  |  +- javax.servlet:servlet-api:jar:2.3:provided
+|  |  |  +- geronimo-spec:geronimo-spec-javamail:jar:1.3.1-rc3:provided
+|  |  |  \- geronimo-spec:geronimo-spec-jms:jar:1.1-rc4:provided
+|  |  +- excalibur-instrument:excalibur-instrument-api:jar:2.1:provided
+|  |  +- concurrent:concurrent:jar:1.3.4:provided
+|  |  +- excalibur-component:excalibur-testcase:jar:2.1:provided
+|  |  +- excalibur-component:excalibur-component:jar:2.1:provided
+|  |  |  +- excalibur-instrument:excalibur-instrument-mgr-api:jar:2.1:provided
+|  |  |  \- excalibur-instrument:excalibur-instrument-mgr-impl:jar:2.1:provided
+|  |  \- qdox:qdox:jar:1.5:provided
+|  +- excalibur-instrument:excalibur-instrument:jar:1.0:provided
+|  +- excalibur-logger:excalibur-logger:jar:1.1:provided
+|  +- excalibur-pool:excalibur-pool-api:jar:2.1:provided
+|  +- excalibur-pool:excalibur-pool-impl:jar:2.1:provided
+|  |  \- junitperf:junitperf:jar:1.8:provided
+|  +- excalibur-pool:excalibur-pool-instrumented:jar:2.1:provided
+|  +- org.htmlparser:htmllexer:jar:2.1:provided
+|  +- org.htmlparser:htmlparser:jar:2.1:provided
+|  +- org.apache.httpcomponents:httpclient:jar:4.2.6:compile
+|  +- org.apache.httpcomponents:httpmime:jar:4.2.6:provided
+|  +- org.apache.httpcomponents:httpcore:jar:4.2.5:compile
+|  +- oro:oro:jar:2.0.8:provided
+|  +- jcharts:jcharts:jar:0.7.5:provided
+|  +- org.jdom:jdom:jar:1.1.3:provided
+|  +- org.mozilla:rhino:jar:1.7R5:provided
+|  +- logkit:logkit:jar:2.0:provided
+|  +- soap:soap:jar:2.3.1:provided
+|  +- net.sf.jtidy:jtidy:jar:r938:provided
+|  +- org.apache.tika:tika-core:jar:1.7:provided
+|  +- org.apache.tika:tika-parsers:jar:1.7:provided
+|  |  +- org.gagravarr:vorbis-java-tika:jar:0.6:provided
+|  |  +- edu.ucar:netcdf:jar:4.2.20:provided
+|  |  |  \- edu.ucar:unidataCommon:jar:4.2.20:provided
+|  |  |     \- net.jcip:jcip-annotations:jar:1.0:provided
+|  |  +- net.sourceforge.jmatio:jmatio:jar:1.0:provided
+|  |  +- org.apache.james:apache-mime4j-core:jar:0.7.2:provided
+|  |  +- org.apache.james:apache-mime4j-dom:jar:0.7.2:provided
+|  |  +- org.apache.commons:commons-compress:jar:1.8.1:provided
+|  |  +- org.tukaani:xz:jar:1.5:provided
+|  |  +- org.apache.pdfbox:pdfbox:jar:1.8.8:provided
+|  |  |  +- org.apache.pdfbox:fontbox:jar:1.8.8:provided
+|  |  |  \- org.apache.pdfbox:jempbox:jar:1.8.8:provided
+|  |  +- org.bouncycastle:bcmail-jdk15:jar:1.45:provided
+|  |  +- org.bouncycastle:bcprov-jdk15:jar:1.45:provided
+|  |  +- org.apache.poi:poi:jar:3.11:provided
+|  |  +- org.apache.poi:poi-scratchpad:jar:3.11:provided
+|  |  +- org.apache.poi:poi-ooxml:jar:3.11:provided
+|  |  |  \- org.apache.poi:poi-ooxml-schemas:jar:3.11:provided
+|  |  |     \- org.apache.xmlbeans:xmlbeans:jar:2.6.0:provided
+|  |  +- org.ccil.cowan.tagsoup:tagsoup:jar:1.2.1:provided
+|  |  +- org.ow2.asm:asm-debug-all:jar:4.1:provided
+|  |  +- com.googlecode.mp4parser:isoparser:jar:1.0.2:provided
+|  |  |  \- org.aspectj:aspectjrt:jar:1.8.0:provided
+|  |  +- com.drewnoakes:metadata-extractor:jar:2.6.2:provided
+|  |  |  \- com.adobe.xmp:xmpcore:jar:5.1.2:provided
+|  |  +- de.l3s.boilerpipe:boilerpipe:jar:1.1.0:provided
+|  |  +- rome:rome:jar:1.0:provided
+|  |  |  \- jdom:jdom:jar:1.0:provided
+|  |  +- org.gagravarr:vorbis-java-core:jar:0.6:provided
+|  |  +- com.googlecode.juniversalchardet:juniversalchardet:jar:1.0.3:provided
+|  |  +- com.uwyn:jhighlight:jar:1.0:provided
+|  |  \- com.pff:java-libpst:jar:0.8.1:provided
+|  +- com.thoughtworks.xstream:xstream:jar:1.4.8:provided
+|  +- xmlpull:xmlpull:jar:1.1.3.1:provided
+|  +- xpp3:xpp3_min:jar:1.1.4c:provided
+|  +- xalan:xalan:jar:2.7.2:provided
+|  +- xalan:serializer:jar:2.7.2:provided
+|  +- xerces:xercesImpl:jar:2.12.0.SP02:provided
+|  +- xml-apis:xml-apis:jar:1.4.01:provided
+|  +- org.apache.xmlgraphics:xmlgraphics-commons:jar:1.5:provided
+|  +- javax.mail:mail:jar:1.5.0-b01:provided
+|  |  \- javax.activation:activation:jar:1.1.1:compile
+|  +- org.apache.geronimo.specs:geronimo-jms_1.1_spec:jar:1.1.1:provided
+|  +- org.jsoup:jsoup:jar:1.8.1:provided
+|  +- org.jodd:jodd-core:jar:3.6.4:provided
+|  +- org.jodd:jodd-lagarto:jar:3.6.4:provided
+|  +- org.jodd:jodd-log:jar:3.6.4:provided
+|  +- org.mongodb:mongo-java-driver:jar:2.11.3:provided
+|  +- com.fifesoft:rsyntaxtextarea:jar:2.5.6:provided
+|  +- org.slf4j:slf4j-api:jar:1.7.25:compile
+|  \- org.slf4j:slf4j-nop:jar:1.7.10:provided
++- org.jboss.ws.cxf:jbossws-cxf-dist:pom:5.2.5-SNAPSHOT:provided
++- org.jboss.ws:jbossws-common:jar:3.2.3-SNAPSHOT:compile
+|  \- jboss.jaxbintros:jboss-jaxb-intros:jar:1.0.2.GA:compile
++- org.jboss.ws:jbossws-common-tools:jar:1.3.2.Final:compile
+|  \- org.jboss.ws:jbossws-api:jar:1.1.2.Final:compile
++- gnu.getopt:java-getopt:jar:1.0.13:test
++- org.jboss.spec.javax.ejb:jboss-ejb-api_3.1_spec:jar:1.0.2.Final:compile
++- javax.jws:jsr181-api:jar:1.0-MR1:compile
++- org.jboss.ws.cxf:jbossws-cxf-client:jar:5.2.5-SNAPSHOT:compile
+|  +- org.jboss.modules:jboss-modules:jar:1.8.6.Final:compile
+|  +- org.jboss.ws.cxf:jbossws-cxf-transports-udp:jar:5.2.5-SNAPSHOT:compile
+|  |  \- org.jboss.spec.javax.annotation:jboss-annotations-api_1.2_spec:jar:1.0.2.Final:compile
+|  +- org.jboss.ws.cxf:jbossws-cxf-transports-undertow:jar:5.2.5-SNAPSHOT:compile
+|  |  \- org.jboss.ws.projects:jaxws-undertow-httpspi:jar:1.0.1.Final:compile
+|  |     +- org.jboss.spec.javax.xml.ws:jboss-jaxws-api_2.2_spec:jar:2.0.2.Final:compile
+|  |     \- io.undertow:undertow-core:jar:2.0.13.Final:compile
+|  |        +- org.jboss.xnio:xnio-api:jar:3.3.8.Final:compile
+|  |        \- org.jboss.xnio:xnio-nio:jar:3.3.8.Final:runtime
+|  +- org.apache.cxf:cxf-rt-transports-http-hc:jar:3.2.6:compile
+|  |  +- org.apache.httpcomponents:httpcore-nio:jar:4.4.9:compile
+|  |  \- org.apache.httpcomponents:httpasyncclient:jar:4.1.4:compile
+|  +- org.apache.cxf:cxf-rt-wsdl:jar:3.2.6:compile
+|  +- com.sun.xml.fastinfoset:FastInfoset:jar:1.2.15:compile
+|  +- org.jboss.spec.javax.xml.ws:jboss-jaxws-api_2.3_spec:jar:1.0.0.Final:compile
+|  \- com.sun.xml.messaging.saaj:saaj-impl:jar:1.3.16-jbossorg-1:compile
+|     \- org.jvnet.mimepull:mimepull:jar:1.7:compile
++- org.jboss.ws.cxf:jbossws-cxf-jaspi:jar:5.2.5-SNAPSHOT:compile
+|  +- org.jboss.spec.javax.security.auth.message:jboss-jaspi-api_1.1_spec:jar:1.0.2.Final:compile
+|  \- org.jboss.logging:jboss-logging-annotations:jar:2.1.0.Final:compile
++- javax.inject:javax.inject:jar:1:test
++- org.jboss.shrinkwrap:shrinkwrap-depchain:pom:1.2.6:compile
+|  +- org.jboss.shrinkwrap:shrinkwrap-api:jar:1.2.6:compile
+|  +- org.jboss.shrinkwrap:shrinkwrap-spi:jar:1.2.6:compile
+|  \- org.jboss.shrinkwrap:shrinkwrap-impl-base:jar:1.2.6:compile
++- org.jboss.arquillian.junit:arquillian-junit-container:jar:1.1.11.Final:compile
+|  +- org.jboss.arquillian.junit:arquillian-junit-core:jar:1.1.11.Final:compile
+|  +- org.jboss.arquillian.test:arquillian-test-api:jar:1.1.11.Final:compile
+|  |  \- org.jboss.arquillian.core:arquillian-core-api:jar:1.1.11.Final:compile
+|  +- org.jboss.arquillian.test:arquillian-test-spi:jar:1.1.11.Final:compile
+|  |  \- org.jboss.arquillian.core:arquillian-core-spi:jar:1.1.11.Final:compile
+|  +- org.jboss.arquillian.container:arquillian-container-test-api:jar:1.1.11.Final:compile
+|  +- org.jboss.arquillian.container:arquillian-container-test-spi:jar:1.1.11.Final:compile
+|  |  \- org.jboss.arquillian.container:arquillian-container-spi:jar:1.1.11.Final:compile
+|  |     \- org.jboss.shrinkwrap.descriptors:shrinkwrap-descriptors-api-base:jar:2.0.0-alpha-8:compile
+|  +- org.jboss.arquillian.core:arquillian-core-impl-base:jar:1.1.11.Final:compile
+|  +- org.jboss.arquillian.test:arquillian-test-impl-base:jar:1.1.11.Final:compile
+|  +- org.jboss.arquillian.container:arquillian-container-impl-base:jar:1.1.11.Final:compile
+|  |  +- org.jboss.arquillian.config:arquillian-config-api:jar:1.1.11.Final:compile
+|  |  +- org.jboss.arquillian.config:arquillian-config-impl-base:jar:1.1.11.Final:compile
+|  |  \- org.jboss.shrinkwrap.descriptors:shrinkwrap-descriptors-spi:jar:2.0.0-alpha-8:compile
+|  \- org.jboss.arquillian.container:arquillian-container-test-impl-base:jar:1.1.11.Final:compile
++- log4j:log4j:jar:1.2.17:compile
++- commons-logging:commons-logging:jar:1.2:compile
++- org.bouncycastle:bcprov-jdk15on:jar:1.60:test
+\- org.slf4j:slf4j-log4j12:jar:1.7.25:compile

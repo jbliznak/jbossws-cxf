@@ -1,0 +1,2 @@
+org.jboss.ws.cxf:jbossws-cxf-deps-test:jar:1.0.0.Final
+\- org.jboss.ws.cxf:jbossws-cxf-dist:pom:5.2.5-SNAPSHOT:compile
