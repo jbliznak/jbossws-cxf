@@ -6,7 +6,6 @@ org.jboss.ws.cxf:jbossws-cxf-deps-test:jar:1.0.0.Final
    +- org.jboss.ws.cxf:jbossws-cxf-factories:jar:5.2.5-SNAPSHOT:compile
    +- org.apache.cxf:cxf-rt-frontend-jaxws:jar:3.2.6:compile
    |  +- xml-resolver:xml-resolver:jar:1.2:compile
-   |  +- org.ow2.asm:asm:jar:5.2:compile
    |  +- org.apache.cxf:cxf-core:jar:3.2.6:compile
    |  |  +- com.fasterxml.woodstox:woodstox-core:jar:5.1.0:compile
    |  |  |  \- org.codehaus.woodstox:stax2-api:jar:4.1:compile

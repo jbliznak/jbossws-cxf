@@ -1662,8 +1662,6 @@
 /org/ow2/asm
 /org/ow2/asm/asm
 /org/ow2/asm/asm/5.2
-/org/ow2/asm/asm/5.2/asm-5.2.jar
-/org/ow2/asm/asm/5.2/asm-5.2.jar.sha1
 /org/ow2/asm/asm/5.2/asm-5.2.pom
 /org/ow2/asm/asm/5.2/asm-5.2.pom.sha1
 /org/ow2/asm/asm/5.2/_remote.repositories
