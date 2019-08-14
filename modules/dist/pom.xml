@@ -8,7 +8,7 @@
   <parent>
     <groupId>org.jboss.ws.cxf</groupId>
     <artifactId>jbossws-cxf</artifactId>
-    <version>5.2.4-SNAPSHOT</version>
+    <version>5.2.5-SNAPSHOT</version>
     <relativePath>../../pom.xml</relativePath>
   </parent>
 
@@ -199,28 +199,6 @@
         <jboss.home>${project.build.directory}/wildfly-${jboss.version}</jboss.home>
       </properties>
     </profile>
-    
-    <!--
-    Name:  wildfly1100
-    Descr: WildFly-11.0.0 specific dependencies
-    -->
-    <profile>
-      <id>wildfly1100</id>
-      <dependencies>
-        <dependency>
-          <groupId>org.jboss.ws.cxf</groupId>
-          <artifactId>jbossws-cxf-resources</artifactId>
-          <version>${project.version}</version>
-          <classifier>wildfly1100</classifier>     
-          <scope>provided</scope>
-        </dependency>
-        <dependency>
-          <groupId>org.jboss.ws</groupId>
-          <artifactId>jbossws-wildfly1100-server-integration</artifactId>
-          <scope>provided</scope>
-        </dependency>
-      </dependencies>
-    </profile>
 
     <!--
     Name:  wildfly1200
@@ -265,7 +243,6 @@
         </dependency>
       </dependencies>
     </profile>
-
     <!--
     Name:  wildfly1400
     Descr: WildFly-14.0.0 specific dependencies
@@ -278,6 +255,27 @@
           <artifactId>jbossws-cxf-resources</artifactId>
           <version>${project.version}</version>
           <classifier>wildfly1400</classifier>     
+          <scope>provided</scope>
+        </dependency>
+        <dependency>
+          <groupId>org.jboss.ws</groupId>
+          <artifactId>jbossws-wildfly1400-server-integration</artifactId>
+          <scope>provided</scope>
+        </dependency>
+      </dependencies>
+    </profile>
+    <!--
+    Name:  wildfly1500
+    Descr: WildFly-15.0.0 specific dependencies
+    -->
+    <profile>
+      <id>wildfly1500</id>
+      <dependencies>
+        <dependency>
+          <groupId>org.jboss.ws.cxf</groupId>
+          <artifactId>jbossws-cxf-resources</artifactId>
+          <version>${project.version}</version>
+          <classifier>wildfly1500</classifier>     
           <scope>provided</scope>
         </dependency>
       </dependencies>

@@ -9,7 +9,7 @@
   <parent>
     <groupId>org.jboss.ws.cxf</groupId>
     <artifactId>jbossws-cxf</artifactId>
-    <version>5.2.4-SNAPSHOT</version>
+    <version>5.2.5-SNAPSHOT</version>
     <relativePath>../../pom.xml</relativePath>
   </parent>
 
@@ -27,8 +27,9 @@
     <appclient.output.dir>${project.build.directory}/appclient-logs</appclient.output.dir>
     <org.littleshoot.littleproxy.version>1.0.0-beta2</org.littleshoot.littleproxy.version>
     <gnu.getopt.version>1.0.13</gnu.getopt.version>
-    <bc.version>1.56</bc.version>
+    <bc.version>1.60</bc.version>
     <resources-plugin-filters.version>1.1.0.Final</resources-plugin-filters.version>
+    <exec.plugin.version>1.2.1</exec.plugin.version>
     <port-offset.cxf-tests.jboss>0</port-offset.cxf-tests.jboss>
     <port-offset.cxf-tests.ssl-mutual-auth>5000</port-offset.cxf-tests.ssl-mutual-auth>
     <port-offset.cxf-tests.default-config-tests>10000</port-offset.cxf-tests.default-config-tests>
@@ -191,7 +192,7 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
-        <version>1.2.1</version>
+        <version>${exec.plugin.version}</version>
         <inherited>false</inherited>
         <executions>
           <execution>
@@ -584,80 +585,6 @@
         </plugins>
       </build>
     </profile>
-
-    <!--
-    Descr: WildFly-11.0.0 specific options
-    -->
-    <profile>
-      <id>wildfly1100</id>
-      <properties>
-        <jboss.remoting.protocol>remote+http</jboss.remoting.protocol>
-        <jboss.initial.context.factory>org.wildfly.naming.client.WildFlyInitialContextFactory</jboss.initial.context.factory>
-      </properties>
-      <dependencies>
-        <dependency>
-          <groupId>org.jboss.ws</groupId>
-          <artifactId>jbossws-wildfly1100-tests-integration</artifactId>
-          <exclusions>
-            <exclusion>
-              <groupId>org.jboss.sasl</groupId>
-              <artifactId>jboss-sasl</artifactId>
-            </exclusion>
-          </exclusions>
-        </dependency>
-        <!-- Arquillian container integration -->
-        <dependency>
-          <groupId>org.wildfly.arquillian</groupId>
-          <artifactId>wildfly-arquillian-container-managed</artifactId>
-          <exclusions>
-            <exclusion>
-              <groupId>org.jboss.sasl</groupId>
-              <artifactId>jboss-sasl</artifactId>
-            </exclusion>
-            <exclusion>
-              <groupId>org.jboss.marshalling</groupId>
-              <artifactId>jboss-marshalling</artifactId>
-            </exclusion>
-          </exclusions>
-        </dependency>
-        <dependency>
-       	  <groupId>org.jboss.arquillian.protocol</groupId>
-       	  <artifactId>arquillian-protocol-servlet</artifactId>
-       	  <version>${arquillian.version}</version>
-       	  <scope>test</scope>
-        </dependency>
-        <!-- LittleProxy depencency declared in this profile as other profiles require different exclusions -->
-        <dependency>
-          <groupId>org.littleshoot</groupId>
-          <artifactId>littleproxy</artifactId>
-          <version>${org.littleshoot.littleproxy.version}</version>
-          <exclusions>
-            <exclusion>
-              <groupId>org.slf4j</groupId>
-              <artifactId>slf4j-api</artifactId>
-            </exclusion>
-            <exclusion>
-              <groupId>org.slf4j</groupId>
-              <artifactId>slf4j-log4j12</artifactId>
-            </exclusion>
-            <exclusion>
-              <groupId>net.sf.ehcache</groupId>
-              <artifactId>ehcache-core</artifactId>
-            </exclusion>
-            <!-- Let the container messaging subsystem control the Netty dependency version  -->
-            <exclusion>
-              <groupId>io.netty</groupId>
-              <artifactId>netty-all</artifactId>
-            </exclusion>
-          </exclusions>
-        </dependency>
-        <dependency>
-          <groupId>xerces</groupId>
-          <artifactId>xercesImpl</artifactId>
-        </dependency>
-      </dependencies>
-    </profile>
-
     <!--
     Descr: WildFly-12.0.0 specific options
     -->
@@ -803,8 +730,7 @@
         </dependency>
       </dependencies>
     </profile>
-
-    <!--
+     <!--
     Descr: WildFly-14.0.0 specific options
     -->
     <profile>
@@ -815,9 +741,80 @@
       </properties>
       <dependencies>
         <dependency>
+          <groupId>org.jboss.ws</groupId>
+          <artifactId>jbossws-wildfly1400-tests-integration</artifactId>
+          <exclusions>
+            <exclusion>
+              <groupId>org.jboss.sasl</groupId>
+              <artifactId>jboss-sasl</artifactId>
+            </exclusion>
+          </exclusions>
+        </dependency>
+        <!-- Arquillian container integration -->
+        <dependency>
+          <groupId>org.wildfly.arquillian</groupId>
+          <artifactId>wildfly-arquillian-container-managed</artifactId>
+          <exclusions>
+            <exclusion>
+              <groupId>org.jboss.sasl</groupId>
+              <artifactId>jboss-sasl</artifactId>
+            </exclusion>
+            <exclusion>
+              <groupId>org.jboss.marshalling</groupId>
+              <artifactId>jboss-marshalling</artifactId>
+            </exclusion>
+          </exclusions>
+        </dependency>
+        <dependency>
+       	  <groupId>org.jboss.arquillian.protocol</groupId>
+       	  <artifactId>arquillian-protocol-servlet</artifactId>
+       	  <version>${arquillian.version}</version>
+       	  <scope>test</scope>
+        </dependency>
+        <!-- LittleProxy depencency declared in this profile as other profiles require different exclusions -->
+        <dependency>
+          <groupId>org.littleshoot</groupId>
+          <artifactId>littleproxy</artifactId>
+          <version>${org.littleshoot.littleproxy.version}</version>
+          <exclusions>
+            <exclusion>
+              <groupId>org.slf4j</groupId>
+              <artifactId>slf4j-api</artifactId>
+            </exclusion>
+            <exclusion>
+              <groupId>org.slf4j</groupId>
+              <artifactId>slf4j-log4j12</artifactId>
+            </exclusion>
+            <exclusion>
+              <groupId>net.sf.ehcache</groupId>
+              <artifactId>ehcache-core</artifactId>
+            </exclusion>
+            <!-- Let the container messaging subsystem control the Netty dependency version  -->
+            <exclusion>
+              <groupId>io.netty</groupId>
+              <artifactId>netty-all</artifactId>
+            </exclusion>
+          </exclusions>
+        </dependency>
+        <dependency>
+          <groupId>xerces</groupId>
+          <artifactId>xercesImpl</artifactId>
+        </dependency>
+      </dependencies>
+    </profile>
+    <!--
+    Descr: WildFly-15.0.0 specific options
+    -->
+    <profile>
+      <id>wildfly1500</id>
+      <properties>
+        <jboss.remoting.protocol>remote+http</jboss.remoting.protocol>
+        <jboss.initial.context.factory>org.wildfly.naming.client.WildFlyInitialContextFactory</jboss.initial.context.factory>
+      </properties>
+      <dependencies>
+        <dependency>
           <groupId>org.wildfly</groupId>
           <artifactId>wildfly-webservices-tests-integration</artifactId>
-          <version>${jboss.version}</version>
           <exclusions>
             <exclusion>
               <groupId>org.jboss.sasl</groupId>
