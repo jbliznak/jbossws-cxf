@@ -9,7 +9,7 @@
   <parent>
     <groupId>org.jboss.ws.cxf</groupId>
     <artifactId>jbossws-cxf-testsuite</artifactId>
-    <version>5.4.4-SNAPSHOT</version>
+    <version>5.4.4.Final</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
   
@@ -242,7 +242,7 @@
                 </goals>
                 <configuration>
                   <scripts>
-                    <script>file:///${basedir}/src/test/scripts/jbws-testsuite-jms.groovy</script>
+                    <script>file:///${basedir}/src/test/scripts/jbws-testsuite-jms${additionalGroovyScriptSuffix}.groovy</script>
                   </scripts>
                   <properties>
                     <property>
