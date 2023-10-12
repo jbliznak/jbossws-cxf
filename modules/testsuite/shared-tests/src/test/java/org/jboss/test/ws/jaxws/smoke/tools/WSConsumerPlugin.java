@@ -322,13 +322,13 @@ public class WSConsumerPlugin extends JBossWSTest
    }
 
    /**
-    * Set the target JAX-WS specification target. Defaults to <code>2.0</code>
+    * Set the target JAX-WS specification target. Defaults to <code>3.0</code>
     */
    public void testTarget() throws Exception
    {
       consumer.setTargetPackage("org.jboss.test.ws.tools.testTarget");
       consumer.setGenerateSource(true);
-      consumer.setTarget("2.2");
+      consumer.setTarget("3.0");
       consumer.setNoCompile(false);
 
       consumeWSDL();

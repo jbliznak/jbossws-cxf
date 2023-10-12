@@ -176,14 +176,9 @@ public class CXFConsumerImpl extends WSContractConsumer
       }
       
       // Always set the target
-      if ("2.1".equals(target))
+      if (target != null && !target.equals("3.0"))
       {
-         args.add("-frontend");
-         args.add("jaxws21");
-      }
-      else if (target != null && !target.equals("2.2"))
-      {
-         stream.println(Messages.MESSAGES.unsupportedTargetUsingDefault(target, "2.2"));
+         stream.println(Messages.MESSAGES.unsupportedTargetUsingDefault(target, "3.0"));
       }
       
       if (bindingFiles != null)
